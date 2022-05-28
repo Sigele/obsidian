@@ -2,7 +2,26 @@
 
 import normalizeResult from "./normalize.js";
 import destructureQueries from "./destructure.js";
-
+ //Cache methods:
+  //1. read
+  //2. writeThru
+  //3. write
+  //4. construct response obj
+  //5. separate args
+  //6. add nonscalar fields
+  //7. garbage collection
+  //8. get bad hashes
+  //9. root query cleaner
+  //10. get good hashes
+  //11. remove inaccessible hashes
+  //12. cacheread
+  //13. cachewrite
+  //14. cachedelete
+  //15. cacheclear
+  //16. stop poll interval
+  //17. write whole query
+  //18. read whole query
+  //19. populate all hashes
 export default class BrowserCache {
   constructor(
     initialCache = {

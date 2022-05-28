@@ -8,6 +8,21 @@
  * @include) 5. We won't worry about fragments for now 6. This function will assume that everything passed in can be a query or a mutation (not both). 8. We will handle only the meta field "__typename" for now 9. What edge cases as far as field/query names do we have to worry about: special characters, apostrophes, etc??? 10. Directives-implementation doesn't handle fragment inclusion
  */
 
+
+//SIGELE's NOTES:
+//the primary method in this file, destructureQueries, converts a query string into a query object that the cache's methods can use. All other methods are secondary or tertiary helper methods for destructureQueries. See pseudo above each method for details on functionality.
+
+  //destructure queries: used in write and write thru. 
+  //findquerystrings: helper function for above
+  //createQueriesObj: ^^
+  //splitUpQueryStr: helper for createQueriesObj
+  //replaceQueryVariables: helper for splitupquerystr
+  //findQueryFields: helper for createQueriesObj
+  //findClosingBrace: helper for findQueryFields
+  //destructureQueriesWithFragments: helper for destructureQueries
+  //destructureQueriesWithDirectives: ^^
+
+
 // this function will destructure a query/mutation operation string into a query/mutation operation object
 export function destructureQueries(queryOperationStr, queryOperationVars) {
   // Trims blocks of extra white space into a single white space for uniformity

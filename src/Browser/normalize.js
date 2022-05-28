@@ -2,6 +2,11 @@
 
 // Normalizes responses using the query object from destructure and the response object from
 // the graphql request
+
+//SIGELE's NOTES:
+//normalization => 
+
+//normalizeResult and it's helper functions. Normalize Result takes in an existing query object. If there is a delete flag 
 export default function normalizeResult(queryObj, resultObj, deleteFlag) {
   // Object to hold normalized obj
   const result = {};
